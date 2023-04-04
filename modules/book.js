@@ -6,7 +6,7 @@ export default class Book {
       this.author = author;
     }
 
-    addBook() {
+     addBook = () => {
       Book.booklists.push({
         id: Book.booklists.length + 1,
         title: this.title,
@@ -14,7 +14,7 @@ export default class Book {
       });
     }
 
-    static removeBooks(id) {
+    static removeBooks = (id) => {
       Book.booklists = Book.booklists.filter((book) => book.id !== Number(id));
       localStorage.setItem('bookLists', JSON.stringify(Book.booklists));
     }
@@ -30,7 +30,7 @@ export default class Book {
         Book.listAllBooks();
       }
 
-      static listAllBooks() {
+      static listAllBooks = () => {
         let booklistHtml = '';
         const booklistContainer = document.querySelector('.book-list-container');
         if (Book.booklists.length) {
