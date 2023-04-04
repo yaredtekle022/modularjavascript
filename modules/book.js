@@ -7,12 +7,12 @@ export default class Book {
     }
 
      addBook = () => {
-      Book.booklists.push({
-        id: Book.booklists.length + 1,
-        title: this.title,
-        author: this.author,
-      });
-    }
+       Book.booklists.push({
+         id: Book.booklists.length + 1,
+         title: this.title,
+         author: this.author,
+       });
+     }
 
     static removeBooks = (id) => {
       Book.booklists = Book.booklists.filter((book) => book.id !== Number(id));
