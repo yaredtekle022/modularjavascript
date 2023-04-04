@@ -21,7 +21,7 @@ export default class Book {
 
       saveToStorage = () => localStorage.setItem('bookLists', JSON.stringify(Book.booklists));
 
-      static fetchBooksFromStorage() {
+      static fetchBooksFromStorage = () => {
         if (localStorage.getItem('bookLists')) {
           Book.booklists = JSON.parse(localStorage.getItem('bookLists'));
         } else {
